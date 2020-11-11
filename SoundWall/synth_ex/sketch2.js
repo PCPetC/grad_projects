@@ -132,6 +132,7 @@ function draw() {
 
 
 
+
   //balls draw
 
   calcWave();
@@ -150,7 +151,16 @@ function draw() {
 
   replayWave();
 
+
+  fill(0,0,255);
+  // textSize(5);
+
+  text("freq is: " + freq, width-200, height-30);
+  text("amp is: " + amp, width-200, height-15);
+
+  //try changing colors based off time change;
 }
+
 
 function playOscillator() {
   // starting an oscillator on a user gesture will enable audio
@@ -289,6 +299,9 @@ function replayWave(){
   sequenceTime1 = millis();
   lengthTime1 = millis() + inputst[lastTime];
   up_pressed = true;
+
+  //is it running through the values too quickly
+  //make each code piece independent
 
 
 
