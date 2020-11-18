@@ -390,9 +390,10 @@ function buttonPlay() {
     getAudioContext().resume();
   }
 
+
 }
 
-gestureToStart(){
+function gestureToStart(){
 
 
 }
