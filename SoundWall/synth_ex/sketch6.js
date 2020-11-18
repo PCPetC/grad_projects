@@ -52,6 +52,13 @@ let r1,g1,b1,a1;
 let ballscolor2;
 let r2,g2,b2,a2;
 
+//sequence timer
+let playTimer = 0;
+
+
+// stupid button for user gesture
+let button;
+
 function setup() {
   // let cnv = createCanvas(width, height);
   // cnv.mousePressed(playOscillator);
@@ -110,12 +117,21 @@ function setup() {
      g2 = random(255);
      b2 = random(255);
      a2 = random(255);
+
+     ampOn = false;
+
+     //button for user gesture
+     button = createButton('Play');
+     button.position(40, 100);
+     button.mousePressed(buttonPlay);
 }
 
 function draw() {
   background(0);
   // playOscillator();
   time1 = millis();
+
+  playTimer = 0;
   // print(time1);
 
   lastObjNum = timeArray.length - 1;
@@ -361,5 +377,15 @@ function keyReleased(){
     if (keyCode === LEFT_ARROW){
       left_pressed = false;
     }
+
+}
+
+
+////////////////////////////
+//button for user gesture
+///////////////////////////
+function buttonPlay() {
+  ampOn = true;
+
 
 }
