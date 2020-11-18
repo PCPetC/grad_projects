@@ -386,6 +386,13 @@ function keyReleased(){
 ///////////////////////////
 function buttonPlay() {
   ampOn = true;
+  if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
+
+}
+
+gestureToStart(){
 
 
 }
